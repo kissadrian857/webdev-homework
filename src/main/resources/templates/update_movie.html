@@ -9,7 +9,8 @@
 <div th:if="${selectedMovie.getTitle() != null}">
     <form th:action="@{/updateMovie}" th:object="${selectedMovie}" method="post">
         <div>Title: </div>
-        <input type="text" th:field="*{title}" value=""><br>
+        <div th:text="*{title}"></div>
+        <input type="hidden" th:field="*{title}">
         <div>Genre: </div>
         <input type="text" th:field="*{genre}"><br>
         <div>Playtime: </div>
