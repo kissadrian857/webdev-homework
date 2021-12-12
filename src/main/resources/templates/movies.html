@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" l>
+    <link rel="stylesheet" type="text/css" th:href="@{/movie.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Movies</title>
 </head>
 <body>
@@ -17,11 +19,11 @@
             <td th:text="${movie.getPlaytime()}"></td>
             <td>
                 <a th:href="@{/deleteMovie(movieTitle=${movie.getTitle()})}" class="btn btn-danger ml-2">Delete</a>
+                <a th:href="@{/initUpdate(movieTitle=${movie.getTitle()})}" class="btn btn-primary">Update</a>
             </td>
         </tr>
-    </table>
-    <button>
 
-    </button>
+    </table>
+    <a th:href="@{/initNewMovie}" class="btn btn-success">New movie</a>
 </body>
 </html>

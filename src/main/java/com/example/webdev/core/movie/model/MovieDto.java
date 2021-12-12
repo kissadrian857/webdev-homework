@@ -3,6 +3,8 @@ package com.example.webdev.core.movie.model;
 import java.util.Objects;
 
 public class MovieDto {
+    public MovieDto() {
+    }
 
     private String title;
 
