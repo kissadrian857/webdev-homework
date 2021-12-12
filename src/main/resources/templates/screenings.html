@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screenings</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Movie Title</th>
+        <th>Movie Genre</th>
+        <th>Playtime</th>
+        <th>Room name</th>
+        <th>Start time</th>
+    </tr>
+    <tr th:each="screening : ${screenings}">
+        <td th:text="${screening.getMovieTitle()}"></td>
+        <td th:text="${screening.getMovieGenre()}"></td>
+        <td th:text="${screening.getPlaytime()}"></td>
+        <td th:text="${screening.getRoomName()}"></td>
+        <td th:text="${screening.getStartTime()}"></td>
+    </tr>
+</table>
+</body>
+</html>

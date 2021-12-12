@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update a movie</title>
+</head>
+<body>
+<form th:action="@{/updateMovie}"th:object="${updatedMovie}" method="post">
+    <input type="text" th:field="*{title}" value="">
+    <input type="text" th:field="*{genre}">
+    <input type="number" th:field="*{playtime}">
+</form>
+</body>
+</html>

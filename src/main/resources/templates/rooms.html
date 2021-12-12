@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rooms</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Room name</th>
+        <th>Number of rows</th>
+        <th>Number of columns</th>
+    </tr>
+    <tr th:each="room : ${rooms}">
+        <td th:text="${room.getRoomName()}"></td>
+        <td th:text="${room.getNumberOfRows()}"></td>
+        <td th:text="${room.getNumberOfCols()}"></td>
+    </tr>
+</table>
+</body>
+</html>

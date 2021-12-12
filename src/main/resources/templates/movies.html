@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Movie Title</th>
+            <th>Genre</th>
+            <th>Playtime</th>
+        </tr>
+        <tr th:each="movie : ${movies}">
+            <td th:text="${movie.getTitle()}"></td>
+            <td th:text="${movie.getGenre()}"></td>
+            <td th:text="${movie.getPlaytime()}"></td>
+            <td>
+                <a th:href="@{/deleteMovie(movieTitle=${movie.getTitle()})}" class="btn btn-danger ml-2">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <button>
+
+    </button>
+</body>
+</html>
